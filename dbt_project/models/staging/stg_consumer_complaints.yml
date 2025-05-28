@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_consumer_complaints
+    description: "Cleaned and enriched consumer complaints data."
+    columns:
+      - name: complaint_id
+        description: "Unique ID of each complaint."
+        tests:
+          - not_null
+          - unique
+
+      - name: date_received
+        description: "Date when complaint was received."
+        tests:
+          - not_null
+
+      - name: product
+        description: "Reported product category."
+        tests:
+          - not_null
+
+      - name: contact_channel
+        description: "Grouped channel of submission (digital, phone, other)."
+        tests:
+          - accepted_values:
+              values: ['digital', 'phone', 'other']
+
+      - name: resolution_type
+        description: "Grouped company response."
+        tests:
+          - accepted_values:
+              values: ['compensation', 'explanation', 'in_progress', 'no_response', 'other']

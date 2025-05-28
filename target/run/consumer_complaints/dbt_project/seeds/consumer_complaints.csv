@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "dev"."main"."consumer_complaints" ("complaint_id" integer,"submitted_via" text,"date_submitted" date,"date_received" date,"state" text,"product" text,"sub_product" text,"issue" text,"sub_issue" text,"company_public_response" text,"company_response_to_consumer" text,"timely_response" boolean)
+  ;
+    -- dbt seed --
+    
+          COPY "dev"."main"."consumer_complaints" FROM 'C:\Users\danie\Desktop\Consumer_Complaints\dbt_project/seeds\consumer_complaints.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  

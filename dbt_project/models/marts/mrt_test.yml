@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: mrt_monthly_summary
+    description: Monthly volume and resolution summary by product group
+    tests:
+      - not_null:
+          column_name: month
+
+  - name: mrt_state_resolution
+    description: Resolution quality by state
+    tests:
+      - not_null:
+          column_name: state

@@ -1,0 +1,23 @@
+# Entorno virtual
+venv/
+
+# Caché y archivos temporales de Python
+__pycache__/
+*.pyc
+
+# Checkpoints de Jupyter
+*.ipynb_checkpoints/
+
+
+# Base de datos local
+*.duckdb
+
+# Carpeta de compilación de dbt
+dbt_project/target/
+dbt_project/dbt_packages/
+logs/
+dbt_project/logs/
+
+# Archivos de configuración local
+.env
+.settings/

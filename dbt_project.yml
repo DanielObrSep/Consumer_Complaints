@@ -1,0 +1,20 @@
+name: consumer_complaints
+version: '1.0'
+config-version: 2
+
+profile: consumer_complaints
+
+model-paths: ["dbt_project/models"]
+seed-paths: ["dbt_project/seeds"]
+test-paths: ["dbt_project/tests"]
+macro-paths: ["dbt_project/macros"]
+
+models:
+  consumer_complaints:
+    staging:
+      +materialized: table
+    marts:
+      +materialized: table
+
+
+
