@@ -21,3 +21,5 @@ dbt_project/logs/
 # Archivos de configuración local
 .env
 .settings/
+
+target/
