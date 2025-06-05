@@ -67,8 +67,13 @@ dbt seed
 dbt build
 cd ..
 
-# 4. Exportar CSV desde notebook
-# (ubicado en notebooks/05_export_csv_stg.ipynb)
+# Exportación de datos para Power BI
+
+El archivo `stg_consumer_complaints.csv` se exporta automáticamente al correr los modelos con dbt. Este archivo se usa como entrada directa en Power BI para generar el dashboard.
+
+Ubicación del CSV exportado:
+- `outputs/stg_consumer_complaints.csv`
+
 
 # 5. Abrir consumer_dashboard.pbix en Power BI Desktop
 
